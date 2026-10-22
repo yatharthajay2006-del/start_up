@@ -1,0 +1,6 @@
+{
+  "name": "StoreFlex",
+  "description": "On-demand business storage marketplace connecting businesses needing extra storage capacity with verified warehouse and property owners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

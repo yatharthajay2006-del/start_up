@@ -1,0 +1,2026 @@
+# MASTER PROMPT — BUILD THE COMPLETE STOREFLEX STARTUP MVP
+
+You are an expert product architect, senior full-stack engineer, UI/UX designer, database architect, and startup engineer.
+
+I want you to build a complete, production-quality MVP for a startup called:
+
+# StoreFlex
+
+Tagline:
+
+**“Jitni jagah chahiye, utni hi rent karo.”**
+
+StoreFlex is an on-demand business storage marketplace that connects businesses needing extra storage space with verified property/warehouse owners who have unused storage capacity.
+
+The goal is NOT to build a simple rental website.
+
+The goal is to build a complete working startup prototype with:
+
+- Businessman portal
+- Storage owner portal
+- Admin portal
+- Storage marketplace
+- Property verification
+- Booking system
+- Flexible storage allocation
+- Inventory management
+- Payments
+- Owner payouts
+- Reviews
+- Complaints/disputes
+- Logistics requests
+- AI-assisted storage estimation
+- Smart storage matching
+- Analytics
+- Notifications
+- Responsive modern UI
+- Real backend
+- Real database
+- Authentication
+- Role-based access control
+- Seed/demo data
+
+The application should feel like a serious Indian B2B startup product, not a college demo.
+
+---
+
+# 1. CORE BUSINESS PROBLEM
+
+Small and medium businesses often have enough sales demand to increase inventory, but their existing shop/premises do not have enough storage space.
+
+They usually have to:
+
+- rent an entire warehouse,
+- pay large deposits,
+- commit to long contracts,
+- waste money on unused capacity,
+- or stop increasing inventory.
+
+At the same time, many property owners and businesses have unused storage space.
+
+StoreFlex connects these two sides.
+
+Example:
+
+A businessman needs:
+
+200 sq ft
+
+for:
+
+3 months
+
+instead of renting a 5,000 sq ft warehouse.
+
+StoreFlex allows him to discover, compare, book and pay for only the storage capacity he needs.
+
+---
+
+# 2. IMPORTANT BUSINESS MODEL
+
+Use a MARKETPLACE MODEL.
+
+Do NOT make StoreFlex buy/rent large warehouses itself in the MVP.
+
+Instead:
+
+SPACE OWNER
+↓
+Lists available storage
+↓
+StoreFlex verifies it
+↓
+BUSINESSMAN discovers it
+↓
+Businessman books storage
+↓
+Businessman pays StoreFlex
+↓
+StoreFlex takes commission
+↓
+Remaining amount is payable to space owner
+
+Example:
+
+Customer pays:
+₹20/sq ft/month
+
+Owner receives:
+₹16/sq ft/month
+
+StoreFlex commission:
+₹4/sq ft/month
+
+The commission percentage must be configurable from the admin dashboard.
+
+---
+
+# 3. USER ROLES
+
+Create three primary roles:
+
+## ROLE 1 — BUSINESS
+
+A businessman/company looking for storage.
+
+## ROLE 2 — SPACE OWNER
+
+A warehouse/godown/property owner listing available storage.
+
+## ROLE 3 — ADMIN
+
+StoreFlex operations/admin team.
+
+Implement proper role-based authentication and route protection.
+
+A user must never be able to access another role's private dashboard.
+
+---
+
+# 4. TECHNOLOGY
+
+Prefer the following stack:
+
+Frontend:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+Backend:
+- Next.js server/API routes OR a clean backend architecture compatible with the Replit environment.
+
+Database:
+- PostgreSQL
+
+ORM:
+- Prisma
+
+Authentication:
+- Secure authentication with email/password.
+- Role-based authorization.
+
+Payments:
+- Implement a payment abstraction.
+- If live Razorpay credentials are unavailable, create a realistic mock payment mode for development.
+- Keep the architecture ready for Razorpay integration.
+
+Maps:
+- Use a map abstraction.
+- If Google Maps credentials are unavailable, use a clean map placeholder or OpenStreetMap-compatible solution.
+- Do not break the application because an API key is missing.
+
+Storage:
+- Use the available Replit-compatible storage mechanism for uploaded documents/images.
+- If external cloud storage credentials are unavailable, create a development-safe upload abstraction.
+
+Charts:
+- Use a suitable React charting library.
+
+Icons:
+- Use Lucide React or another clean icon library.
+
+---
+
+# 5. DESIGN DIRECTION
+
+The application must look like a modern funded startup.
+
+Do NOT create a generic Bootstrap-looking website.
+
+Design principles:
+
+- clean
+- premium
+- professional
+- minimal
+- trustworthy
+- business-focused
+- responsive
+- mobile-friendly
+- accessible
+
+Use:
+
+- strong typography
+- generous whitespace
+- rounded cards
+- subtle shadows
+- clear hierarchy
+- professional dashboard layouts
+- polished tables
+- clean forms
+- meaningful empty states
+- loading states
+- error states
+- success states
+
+Do not overuse gradients.
+
+Do not use excessive animations.
+
+Animations should be subtle and purposeful.
+
+Use a consistent design system throughout the entire application.
+
+---
+
+# 6. BRAND
+
+Brand:
+
+StoreFlex
+
+Tagline:
+
+“Jitni jagah chahiye, utni hi rent karo.”
+
+Brand positioning:
+
+“On-demand storage infrastructure for growing businesses.”
+
+Use professional Indian startup-style branding.
+
+The landing page should immediately communicate:
+
+BUSINESS NEEDS SPACE
++
+UNUSED SPACE
+=
+STOREFLEX
+
+---
+
+# 7. LANDING PAGE
+
+Create a beautiful public landing page.
+
+Sections:
+
+## Hero
+
+Headline:
+
+“Grow your inventory without expanding your premises.”
+
+Supporting text:
+
+“Find verified storage space for your business. Rent only the space you need, for as long as you need it.”
+
+Primary CTA:
+
+“Find Storage”
+
+Secondary CTA:
+
+“List Your Space”
+
+Hero visual should show a conceptual storage marketplace/dashboard rather than a generic stock image.
+
+---
+
+## Problem section
+
+Explain:
+
+“Your sales are growing. Your shop isn't.”
+
+Show problems:
+
+- limited shop space
+- expensive full warehouses
+- long-term commitments
+- unused storage capacity
+
+---
+
+## How StoreFlex Works
+
+3 steps:
+
+1. Tell us what you need
+2. Choose verified storage
+3. Store and manage your inventory
+
+---
+
+## For Businesses
+
+Explain:
+
+- flexible storage
+- verified facilities
+- transparent pricing
+- inventory tracking
+- optional logistics
+- scalable capacity
+
+CTA:
+“Find Storage”
+
+---
+
+## For Space Owners
+
+Explain:
+
+- monetize unused space
+- verified business customers
+- occupancy tracking
+- digital bookings
+- monthly payouts
+
+CTA:
+“List Your Space”
+
+---
+
+## Smart Storage
+
+Introduce:
+
+AI-assisted storage estimation.
+
+Example:
+
+“500 cartons → approximately 240 sq ft recommended.”
+
+---
+
+## Trust & Safety
+
+Show:
+
+- KYC verification
+- property verification
+- verified listings
+- digital agreements
+- inventory records
+- dispute support
+
+Do NOT falsely claim real certifications or insurance partnerships.
+
+If a feature is not actually integrated, label it:
+
+“Coming Soon”
+
+or
+
+“Planned Integration”.
+
+---
+
+## Footer
+
+Include:
+
+- About
+- How it works
+- For Businesses
+- For Owners
+- Safety
+- Terms
+- Privacy
+- Contact
+
+---
+
+# 8. AUTHENTICATION
+
+Create:
+
+/login
+
+/register
+
+/forgot-password
+
+Registration should ask:
+
+Name
+Email
+Phone
+Password
+Role
+
+Role options:
+
+Business
+Space Owner
+
+Admin accounts must NOT be publicly selectable.
+
+Create a seeded development admin account.
+
+Do not expose production credentials in frontend code.
+
+---
+
+# 9. BUSINESSMAN DASHBOARD
+
+Route:
+
+/business/dashboard
+
+Create a complete dashboard.
+
+Top:
+
+Good morning, [Name]
+
+Search storage CTA.
+
+Dashboard cards:
+
+- Active Storage
+- Total Space Used
+- Monthly Storage Cost
+- Inventory Items
+- Upcoming Expiry
+
+Sections:
+
+## My Storage
+
+Example:
+
+Meerut Storage Hub
+
+250 sq ft
+
+₹4,500/month
+
+Expires:
+15 January 2027
+
+Status:
+Active
+
+CTA:
+View Storage
+
+---
+
+## Quick Actions
+
+- Find Storage
+- Add Inventory
+- Arrange Pickup
+- View Payments
+- Download Invoice
+
+---
+
+## Inventory Summary
+
+Display:
+
+Total SKUs
+Total Units
+Recent Inward
+Recent Outward
+Low Stock
+
+---
+
+# 10. BUSINESSMAN STORAGE SEARCH
+
+Route:
+
+/business/storage
+
+Create a professional storage marketplace.
+
+Search inputs:
+
+Location
+Required area
+Duration
+Product category
+Budget
+
+Filters:
+
+- distance
+- price
+- area
+- rating
+- CCTV
+- security
+- loading/unloading
+- parking
+- fire safety
+- access hours
+- storage type
+
+Cards should show:
+
+Property image
+Verified badge
+Property name
+Distance
+Available area
+Price
+Rating
+Facilities
+“View Details”
+
+---
+
+# 11. STORAGE DETAIL PAGE
+
+Route:
+
+/business/storage/[id]
+
+Display:
+
+Property name
+Verified status
+Images
+Location
+Available capacity
+Price
+Minimum booking duration
+Facilities
+Access hours
+Security details
+Allowed product categories
+Ratings
+Reviews
+
+Pricing calculator:
+
+Area × price × duration
+
+Example:
+
+200 sq ft × ₹18 × 3 months
+
+= ₹10,800
+
+Then show:
+
+Storage cost
+Platform fee
+Taxes if configured
+Total
+
+CTA:
+
+“Book Storage”
+
+---
+
+# 12. SMART STORAGE CALCULATOR
+
+Create:
+
+/business/storage-calculator
+
+User enters:
+
+Product category
+Quantity
+Unit type
+Unit dimensions
+Stacking height
+Special requirements
+
+The system estimates:
+
+- approximate volume
+- recommended storage area
+- handling/aisle allowance
+- suggested storage size
+
+Example output:
+
+Recommended:
+
+250 sq ft
+
+Estimated monthly cost:
+
+₹4,500–₹5,500
+
+IMPORTANT:
+
+This is an estimation tool.
+
+Do not represent calculations as certified warehouse safety advice.
+
+Build the calculation engine so it can later be replaced by an AI model.
+
+---
+
+# 13. BOOKING FLOW
+
+Create a multi-step booking flow.
+
+STEP 1:
+Select storage area.
+
+STEP 2:
+Select duration.
+
+STEP 3:
+Enter inventory/product details.
+
+STEP 4:
+Review pricing.
+
+STEP 5:
+Accept storage terms.
+
+STEP 6:
+Payment.
+
+STEP 7:
+Booking confirmation.
+
+Booking states:
+
+- Pending
+- Payment Pending
+- Confirmed
+- Active
+- Expiring Soon
+- Expired
+- Cancelled
+- Disputed
+
+Generate a unique booking ID.
+
+Example:
+
+SF-2026-000123
+
+---
+
+# 14. DIGITAL AGREEMENT
+
+After successful booking:
+
+Generate a digital storage agreement summary.
+
+Include:
+
+Business name
+Owner name
+Property
+Storage size
+Start date
+End date
+Monthly price
+Deposit if applicable
+Rules
+Cancellation policy
+
+Provide:
+
+“Download Agreement”
+
+If PDF generation is feasible, implement it.
+
+Otherwise provide a printable agreement page.
+
+---
+
+# 15. BUSINESS INVENTORY MANAGEMENT
+
+Route:
+
+/business/inventory
+
+Features:
+
+Add inventory
+Edit inventory
+Delete inventory
+Search inventory
+Filter by category
+Filter by storage location
+
+Fields:
+
+SKU
+Product name
+Category
+Quantity
+Unit
+Storage location
+Date received
+Value
+Notes
+
+Inventory movement types:
+
+IN
+OUT
+TRANSFER
+ADJUSTMENT
+
+Create inventory movement history.
+
+---
+
+# 16. BARCODE / QR READY ARCHITECTURE
+
+Each storage unit should have a unique identifier.
+
+Example:
+
+MER-04-B17
+
+Create a QR display page.
+
+If QR scanning is practical in the current environment, implement it.
+
+Otherwise make the architecture ready for QR scanning.
+
+Scanning should open:
+
+Storage Unit
+Current Inventory
+Recent movements
+
+---
+
+# 17. BUSINESS PAYMENTS
+
+Create:
+
+/business/payments
+
+Display:
+
+- invoices
+- payments
+- payment status
+- amount
+- booking
+- date
+- invoice download
+
+Payment statuses:
+
+Pending
+Paid
+Failed
+Refunded
+
+Create mock payment mode if live payment credentials are unavailable.
+
+Clearly label mock payments as development/demo mode.
+
+---
+
+# 18. LOGISTICS
+
+Create:
+
+/business/logistics
+
+Businessman can request:
+
+Pickup
+Delivery
+
+Fields:
+
+Pickup address
+Drop address
+Inventory quantity
+Vehicle type
+Preferred date
+Preferred time
+
+Calculate an estimated logistics price using a configurable formula.
+
+Status:
+
+Requested
+Assigned
+In Transit
+Delivered
+Cancelled
+
+Admin can manage logistics requests.
+
+---
+
+# 19. SPACE OWNER DASHBOARD
+
+Route:
+
+/owner/dashboard
+
+Dashboard cards:
+
+Total Properties
+Total Available Space
+Occupied Space
+Occupancy %
+Monthly Earnings
+Pending Requests
+
+Example:
+
+Total Capacity:
+5,000 sq ft
+
+Occupied:
+3,200 sq ft
+
+Available:
+1,800 sq ft
+
+Occupancy:
+64%
+
+---
+
+# 20. OWNER PROPERTY MANAGEMENT
+
+Routes:
+
+/owner/properties
+
+/owner/properties/new
+
+Allow owner to:
+
+Add property
+Edit property
+View property
+Pause listing
+Delete/unlist property
+
+Property fields:
+
+Property name
+Property type
+Address
+City
+Pincode
+Latitude
+Longitude
+Total area
+Available area
+Ceiling height
+Floor
+Storage type
+Access hours
+
+Facilities:
+
+CCTV
+Security
+Loading
+Parking
+Electricity
+Fire safety
+Temperature control
+
+Pricing:
+
+Price per sq ft/month
+
+Minimum booking duration
+
+Deposit
+
+Allowed categories
+
+---
+
+# 21. PROPERTY VERIFICATION
+
+When owner submits a property:
+
+Status:
+
+“Verification Pending”
+
+Admin reviews:
+
+Owner KYC
+Property documents
+Address
+Images
+Facilities
+Safety details
+
+Statuses:
+
+Pending
+Under Review
+Verified
+Rejected
+Suspended
+
+Only verified properties should appear in the normal public marketplace.
+
+---
+
+# 22. OWNER BOOKINGS
+
+Route:
+
+/owner/bookings
+
+Owner sees:
+
+Business
+Property
+Storage size
+Start date
+End date
+Amount
+Status
+
+Owner can:
+
+Accept
+Reject
+View details
+
+Depending on the configured marketplace workflow.
+
+---
+
+# 23. OWNER PAYOUTS
+
+Route:
+
+/owner/earnings
+
+Show:
+
+Total earnings
+Pending payout
+Paid amount
+Platform commission
+Net payout
+
+Example:
+
+Booking revenue:
+₹20,000
+
+StoreFlex commission:
+₹4,000
+
+Owner payout:
+₹16,000
+
+Create payout records.
+
+Do not perform real bank transfers in MVP.
+
+---
+
+# 24. OWNER ANALYTICS
+
+Create charts:
+
+Occupancy over time
+Monthly earnings
+Space utilization
+Bookings
+Average booking duration
+
+Use real database data.
+
+---
+
+# 25. ADMIN DASHBOARD
+
+Route:
+
+/admin/dashboard
+
+Create a highly professional operations dashboard.
+
+Metrics:
+
+Total businesses
+Total owners
+Total properties
+Verified properties
+Active bookings
+Total storage capacity
+Occupied capacity
+Occupancy rate
+GMV
+Platform revenue
+Pending verification
+Open disputes
+
+Charts:
+
+Revenue
+Bookings
+Storage demand
+Occupancy
+
+---
+
+# 26. ADMIN USER MANAGEMENT
+
+Route:
+
+/admin/users
+
+Tabs:
+
+Businesses
+Owners
+Admins
+
+Admin can:
+
+View
+Suspend
+Activate
+Verify KYC
+View activity
+
+---
+
+# 27. ADMIN PROPERTY VERIFICATION
+
+Route:
+
+/admin/properties
+
+Show:
+
+Pending properties
+
+Each card/table row:
+
+Owner
+Property
+Location
+Area
+Submitted date
+Verification status
+
+Admin can:
+
+Review
+Verify
+Reject
+Suspend
+
+Create a proper verification detail page.
+
+---
+
+# 28. ADMIN BOOKING MANAGEMENT
+
+Route:
+
+/admin/bookings
+
+Filters:
+
+Active
+Pending
+Completed
+Cancelled
+Disputed
+
+Admin can inspect the complete booking timeline.
+
+---
+
+# 29. ADMIN COMMISSION SETTINGS
+
+Create:
+
+/admin/settings/commission
+
+Allow admin to configure:
+
+Platform commission %
+
+Minimum platform fee
+
+Optional logistics commission
+
+Do not hard-code commission values throughout the application.
+
+---
+
+# 30. DISPUTE MANAGEMENT
+
+Create complaint/dispute system.
+
+Possible categories:
+
+Damage
+Missing inventory
+Access issue
+Payment issue
+Property issue
+Other
+
+Business can submit dispute.
+
+Owner can respond.
+
+Admin resolves.
+
+Statuses:
+
+Open
+Under Review
+Resolved
+Rejected
+
+Create a complete timeline.
+
+---
+
+# 31. REVIEWS
+
+After completed booking:
+
+Business can review storage.
+
+Rating:
+
+1–5
+
+Categories:
+
+Cleanliness
+Security
+Accessibility
+Accuracy
+Overall
+
+Owner can view reviews.
+
+Admin can moderate reviews.
+
+---
+
+# 32. NOTIFICATIONS
+
+Create notification system.
+
+Events:
+
+Booking confirmed
+Booking rejected
+Payment successful
+Payment failed
+Booking expiring
+Inventory added
+Dispute updated
+Property verified
+Payout processed
+
+Create:
+
+/notifications
+
+Use in-app notifications.
+
+Email/SMS/WhatsApp should be abstraction-ready but should not require unavailable API credentials.
+
+---
+
+# 33. SMART MATCHING ENGINE
+
+Implement a rule-based matching engine first.
+
+Inputs:
+
+Location
+Distance
+Storage area
+Price
+Duration
+Product category
+Facilities
+Rating
+Verification status
+
+Calculate a match score.
+
+Example:
+
+Location:
+30%
+
+Price:
+20%
+
+Capacity:
+20%
+
+Facilities:
+15%
+
+Product compatibility:
+10%
+
+Rating:
+5%
+
+Return:
+
+Match score
+
+Example:
+
+94%
+
+Show:
+
+“Best Match”
+
+Do NOT claim that this is machine learning.
+
+Architecture should allow future AI/ML integration.
+
+---
+
+# 34. ADMIN DEMAND ANALYTICS
+
+Create:
+
+/admin/analytics
+
+Show:
+
+Most requested cities
+Most requested storage sizes
+Most requested categories
+Average booking duration
+Average price
+Occupancy
+Unmet demand
+
+Example:
+
+“200–500 sq ft is the most requested storage range.”
+
+Use actual demo/database data.
+
+---
+
+# 35. FUTURE AI FEATURES
+
+Create placeholders/architecture for:
+
+AI Storage Estimator
+Demand Forecasting
+Smart Pricing
+Storage Recommendation
+Inventory Insights
+
+Do NOT fake AI.
+
+If an AI API key is unavailable:
+
+use deterministic rules and label:
+
+“AI-assisted feature — demo mode”
+
+---
+
+# 36. DATABASE
+
+Create a proper normalized PostgreSQL schema using Prisma.
+
+At minimum include models for:
+
+User
+BusinessProfile
+OwnerProfile
+Property
+StorageUnit
+Facility
+PropertyImage
+Verification
+Booking
+BookingItem
+InventoryItem
+InventoryMovement
+Payment
+Invoice
+Payout
+Review
+Dispute
+DisputeMessage
+LogisticsOrder
+Notification
+Agreement
+CommissionSetting
+
+Use proper:
+
+- primary keys
+- foreign keys
+- indexes
+- enums
+- timestamps
+- createdAt
+- updatedAt
+
+Avoid storing everything in one giant table.
+
+---
+
+# 37. DEMO DATA
+
+Seed the database.
+
+Create realistic Indian demo data.
+
+Example cities:
+
+Meerut
+Ghaziabad
+Noida
+Delhi
+
+Create:
+
+10+ properties
+20+ storage units
+10+ businesses
+multiple bookings
+inventory records
+payments
+reviews
+notifications
+disputes
+analytics data
+
+Use realistic INR pricing.
+
+Do not use real people's personal information.
+
+---
+
+# 38. DEMO ACCOUNTS
+
+Create development accounts.
+
+Example:
+
+Business:
+business@storeflex.demo
+
+Owner:
+owner@storeflex.demo
+
+Admin:
+admin@storeflex.demo
+
+Use secure development-only passwords and clearly document them.
+
+Do not expose secrets in frontend source code.
+
+---
+
+# 39. SECURITY
+
+Implement:
+
+- password hashing
+- authentication
+- authorization
+- protected routes
+- server-side validation
+- input validation
+- API authorization
+- rate-limit-ready architecture
+- secure environment variables
+- no secrets committed to repository
+- safe error handling
+
+Never trust role information supplied only by frontend.
+
+Always verify permissions on the server.
+
+---
+
+# 40. RESPONSIVENESS
+
+The complete application must work on:
+
+Desktop
+Laptop
+Tablet
+Mobile
+
+Do not only make the landing page responsive.
+
+Dashboards must also be responsive.
+
+Tables should become mobile-friendly cards where appropriate.
+
+---
+
+# 41. UX REQUIREMENTS
+
+Every important action must have:
+
+Loading state
+Success state
+Error state
+Empty state
+
+Example:
+
+If there are no bookings:
+
+“No active bookings yet.”
+
+CTA:
+
+“Find Storage”
+
+Never show a blank screen.
+
+---
+
+# 42. SEARCH & FILTERS
+
+Storage marketplace must support:
+
+Location search
+Price range
+Area range
+Rating
+Facilities
+Product category
+Availability
+
+Search should work against database data.
+
+Do not create fake frontend-only filtering if backend querying is practical.
+
+---
+
+# 43. LOCATION
+
+Use Indian location examples.
+
+Display:
+
+City
+Area
+Pincode
+
+Do not expose exact private property coordinates publicly unless appropriate.
+
+For demo purposes, use approximate locations.
+
+---
+
+# 44. BUSINESS RULES
+
+Implement these rules:
+
+1. Only verified properties appear publicly.
+
+2. Storage cannot be double-booked for overlapping periods.
+
+3. Available capacity must never become negative.
+
+4. Booking cannot exceed available capacity.
+
+5. Expired bookings release capacity.
+
+6. Commission is calculated from configurable admin settings.
+
+7. Only the business owning an inventory item can modify it.
+
+8. Only owners can manage their properties.
+
+9. Only admins can verify properties.
+
+10. Only authorized users can view private booking/payment information.
+
+---
+
+# 45. PRODUCT RESTRICTIONS
+
+Create product category support.
+
+Example:
+
+Allowed:
+
+FMCG
+Furniture
+Garments
+Packaging
+Electronics
+General goods
+
+Restricted/special handling:
+
+Chemicals
+Hazardous materials
+Perishable goods
+Pharmaceuticals
+Other regulated categories
+
+Do NOT give legal approval for any category.
+
+The system should simply allow admins to configure category rules.
+
+---
+
+# 46. IMPORTANT: NO FAKE FUNCTIONALITY
+
+Do not create buttons that do nothing.
+
+If a feature is not implemented:
+
+- either implement it,
+- or clearly label it as “Coming Soon”.
+
+Do not make a fake success message for a nonexistent backend operation.
+
+---
+
+# 47. API ARCHITECTURE
+
+Create clean APIs for:
+
+Authentication
+Users
+Businesses
+Owners
+Properties
+Storage
+Search
+Bookings
+Payments
+Inventory
+Logistics
+Reviews
+Disputes
+Notifications
+Admin
+Analytics
+
+Keep business logic separate from UI components.
+
+---
+
+# 48. CODE QUALITY
+
+Use:
+
+TypeScript
+Reusable components
+Reusable forms
+Reusable tables
+Reusable cards
+Reusable modals
+Server-side validation
+Clean service/repository patterns where appropriate
+
+Avoid:
+
+Huge single files
+Duplicated code
+Hard-coded business logic
+Hard-coded dashboard statistics
+
+---
+
+# 49. ENVIRONMENT VARIABLES
+
+Create a proper `.env.example`.
+
+Include placeholders for:
+
+DATABASE_URL
+AUTH_SECRET
+PAYMENT_KEY
+MAPS_KEY
+STORAGE_KEY
+EMAIL_KEY
+AI_API_KEY
+
+Do not put real secrets in code.
+
+If credentials are unavailable, the application must still run in demo mode.
+
+---
+
+# 50. README
+
+Create a detailed README containing:
+
+Project overview
+Architecture
+Tech stack
+Setup instructions
+Environment variables
+Database setup
+Migration commands
+Seed commands
+Demo accounts
+Available routes
+API overview
+Business model
+Future roadmap
+
+---
+
+# 51. DEVELOPMENT PHASES
+
+Do not attempt to blindly generate everything at once.
+
+Work systematically in these phases:
+
+PHASE 1:
+Project setup
+Design system
+Database
+Authentication
+Role management
+
+PHASE 2:
+Landing page
+Business dashboard
+Owner dashboard
+Admin dashboard
+
+PHASE 3:
+Storage marketplace
+Property management
+Verification
+
+PHASE 4:
+Booking engine
+Pricing
+Payments
+Invoices
+
+PHASE 5:
+Inventory
+QR architecture
+Logistics
+
+PHASE 6:
+Reviews
+Disputes
+Notifications
+
+PHASE 7:
+Analytics
+Smart matching
+Storage calculator
+
+PHASE 8:
+Polish
+Responsive design
+Error handling
+Security
+Seed data
+README
+
+---
+
+# 52. CRITICAL DEVELOPMENT RULE
+
+After each phase:
+
+1. Run the application.
+2. Check for compile errors.
+3. Check database migrations.
+4. Check API errors.
+5. Check authentication.
+6. Check responsive layout.
+7. Fix errors before moving to the next phase.
+
+Do not leave known errors unresolved.
+
+---
+
+# 53. FINAL USER JOURNEYS THAT MUST WORK
+
+## Business journey
+
+Register
+→ Login
+→ Search storage
+→ Filter
+→ Open listing
+→ Calculate price
+→ Book
+→ Mock payment
+→ Booking confirmed
+→ View storage
+→ Add inventory
+→ View inventory
+→ Request logistics
+→ View invoice
+
+This entire flow must work.
+
+---
+
+## Owner journey
+
+Register
+→ Login
+→ Add property
+→ Submit verification
+→ Admin verifies
+→ Property becomes visible
+→ Receive booking
+→ Accept booking
+→ View occupancy
+→ View earnings
+→ View payout
+
+This entire flow must work.
+
+---
+
+## Admin journey
+
+Login
+→ Dashboard
+→ Review owner/property
+→ Verify property
+→ View bookings
+→ View users
+→ View payments
+→ Manage disputes
+→ Configure commission
+→ View analytics
+
+This entire flow must work.
+
+---
+
+# 54. DEMO MODE
+
+Because external APIs may not be available during development:
+
+Create a clearly marked:
+
+“Demo Mode”
+
+Allow:
+
+Mock payments
+Mock notifications
+Demo logistics
+Demo analytics
+
+But keep the architecture ready for production integrations.
+
+---
+
+# 55. UI DETAILS
+
+Use a persistent sidebar in dashboards.
+
+Business sidebar:
+
+Dashboard
+Find Storage
+My Storage
+Inventory
+Logistics
+Payments
+Notifications
+Profile
+
+Owner sidebar:
+
+Dashboard
+Properties
+Bookings
+Availability
+Earnings
+Analytics
+Notifications
+Profile
+
+Admin sidebar:
+
+Dashboard
+Users
+Properties
+Bookings
+Payments
+Disputes
+Analytics
+Settings
+
+---
+
+# 56. LANDING PAGE NAVIGATION
+
+Navbar:
+
+StoreFlex logo
+
+How It Works
+For Businesses
+For Owners
+Safety
+
+Login
+
+Get Started
+
+---
+
+# 57. ERROR HANDLING
+
+Create friendly errors.
+
+Examples:
+
+“No storage found in this area.”
+
+“Selected storage capacity is no longer available.”
+
+“Your session has expired.”
+
+“Payment could not be completed.”
+
+“Property verification is pending.”
+
+Never expose raw database errors to users.
+
+---
+
+# 58. IMPORTANT STARTUP POSITIONING
+
+StoreFlex is NOT:
+
+- a traditional warehouse company
+- simply a property rental website
+- a generic e-commerce platform
+
+StoreFlex is:
+
+**An on-demand storage infrastructure marketplace for growing businesses.**
+
+The product should consistently communicate this positioning.
+
+---
+
+# 59. FUTURE ROADMAP SECTION
+
+Create a roadmap page or section:
+
+### Phase 1
+Marketplace
+
+### Phase 2
+Inventory + Logistics
+
+### Phase 3
+Insurance + Payments
+
+### Phase 4
+AI Demand Forecasting
+
+### Phase 5
+Multi-city Storage Network
+
+Do not implement fake integrations for future features.
+
+---
+
+# 60. IMPORTANT DESIGN PRINCIPLE
+
+The product should make the businessman think:
+
+> “I don't need to rent an entire warehouse anymore.”
+
+And the property owner think:
+
+> “My unused space can generate income.”
+
+That is the core value proposition.
+
+---
+
+# 61. FINAL ACCEPTANCE CRITERIA
+
+The project is complete only when:
+
+- Landing page works
+- Authentication works
+- Role-based routing works
+- Business dashboard works
+- Owner dashboard works
+- Admin dashboard works
+- Storage search works
+- Filters work
+- Property creation works
+- Verification works
+- Booking works
+- Capacity validation works
+- Pricing works
+- Mock payment works
+- Invoice works
+- Inventory works
+- Inventory movements work
+- Logistics request works
+- Reviews work
+- Disputes work
+- Notifications work
+- Owner earnings work
+- Admin analytics work
+- Database is populated
+- Demo accounts work
+- Responsive UI works
+- README exists
+- No obvious console errors
+- No broken buttons
+- No hard-coded dashboard metrics where database data should be used
+
+---
+
+# 62. MOST IMPORTANT INSTRUCTION
+
+Do not just generate a beautiful frontend.
+
+Build a REAL WORKING FULL-STACK MVP.
+
+The UI, database, APIs and business logic must be connected.
+
+When I create a booking in the UI, the database must actually store it.
+
+When a booking consumes storage capacity, available capacity must actually change.
+
+When an owner adds a property, it must actually appear in the admin verification queue.
+
+When the admin verifies it, it must actually become visible in the marketplace.
+
+When a business adds inventory, it must actually appear in its inventory dashboard.
+
+When a payment is made in demo mode, the booking/payment state must actually update.
+
+When a booking expires/cancels, capacity must be handled correctly.
+
+---
+
+# 63. BEFORE CODING
+
+First inspect the existing Replit project.
+
+If it is empty, initialize the project from scratch.
+
+If code already exists:
+
+- preserve useful existing work
+- do not unnecessarily rewrite working components
+- refactor only where necessary
+
+Before implementing, create a concise internal implementation plan based on this specification.
+
+Then start implementing.
+
+Do not ask me unnecessary questions.
+
+Make reasonable engineering decisions yourself.
+
+If an external service requires credentials that are not available, implement a clean mock/demo adapter rather than blocking the project.
+
+---
+
+# 64. FINAL OUTPUT FROM YOU
+
+After implementation, provide me with:
+
+1. What was built
+2. Technology stack
+3. Database structure
+4. Available user roles
+5. Main routes
+6. Demo login credentials
+7. How to run the project
+8. Which features are real
+9. Which features are demo/mock
+10. Which features are planned for production
+11. Any known limitations
+12. Recommended next development steps
+
+Most importantly:
+
+**BUILD THE APPLICATION, NOT JUST THE PLAN.**
